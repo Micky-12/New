@@ -84,9 +84,7 @@
                     <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() },click: $root.onSelectLayer,event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">on</span>       
+            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off', css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },click: $root.onToggleLayer">on</span>       
             &nbsp;
             <span class="layer-name active" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">Weather Scouts</span>
             <!--Show Details button-->
@@ -105,20 +103,14 @@
     </li>             
 
 
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">on</span>       
+            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },click: $root.onToggleLayer">on</span>       
             &nbsp;
             <span class="layer-name active" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">Tactical Symbols</span>
             <!--Show Details button-->
-            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, 
-              css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
+            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings,css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
             </span>
             <!--Dragger handle-->
             <span class="drag-handle glyphicon glyphicon-menu-hamburger" data-bind="visible: $data.selected" style="position: absolute; top: 0px; right: 10px; margin-top: 5px; margin-right: 2px; cursor: ns-resize; display: none;">&nbsp;</span>
@@ -132,20 +124,14 @@
     </li>             
 
 
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">on</span>       
+            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off', css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },click: $root.onToggleLayer">on</span>       
             &nbsp;
             <span class="layer-name active" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">Markers</span>
             <!--Show Details button-->
-            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, 
-              css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
+            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
             </span>
             <!--Dragger handle-->
             <span class="drag-handle glyphicon glyphicon-menu-hamburger" data-bind="visible: $data.selected" style="position: absolute; top: 0px; right: 10px; margin-top: 5px; margin-right: 2px; cursor: ns-resize; display: none;">&nbsp;</span>
@@ -158,9 +144,7 @@
         </div>
     </li>             
 
-</ul>
-            </div>
-        </div>
+</ul>            
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h5 class="panel-title">
@@ -183,20 +167,14 @@
             </div>
             <div class="panel-collapse collapse in" id="base-layers-panel">
                 <ul class="list-group" data-bind="template: { name: 'layer-template', foreach: baseLayers}" id="base-layers-item-container">
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+                    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() },click: $root.onSelectLayer,event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">off</span>       
+            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() }, click: $root.onToggleLayer">off</span>       
             &nbsp;
             <span class="layer-name" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">OpenTopoMap</span>
             <!--Show Details button-->
-            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, 
-              css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
+            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings,css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
             </span>
             <!--Dragger handle-->
             <span class="drag-handle glyphicon glyphicon-menu-hamburger" data-bind="visible: $data.selected" style="position: absolute; top: 0px; right: 10px; margin-top: 5px; margin-right: 2px; cursor: ns-resize; display: none;">&nbsp;</span>
@@ -210,20 +188,14 @@
     </li>             
 
 
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">off</span>       
+            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off', css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() }, click: $root.onToggleLayer">off</span>       
             &nbsp;
             <span class="layer-name" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">OpenStreetMap by EOX</span>
             <!--Show Details button-->
-            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, 
-              css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
+            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
             </span>
             <!--Dragger handle-->
             <span class="drag-handle glyphicon glyphicon-menu-hamburger" data-bind="visible: $data.selected" style="position: absolute; top: 0px; right: 10px; margin-top: 5px; margin-right: 2px; cursor: ns-resize; display: none;">&nbsp;</span>
@@ -237,15 +209,10 @@
     </li>             
 
 
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">off</span>       
+            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off', css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() }, click: $root.onToggleLayer">off</span>       
             &nbsp;
             <span class="layer-name" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">Bing Roads</span>
             <!--Show Details button-->
@@ -264,10 +231,7 @@
     </li>             
 
 
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
             <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
@@ -292,19 +256,14 @@
 
 
     <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+                css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer,  event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">off</span>       
+            <span class="label pull-left label-primary" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },click: $root.onToggleLayer">off</span>       
             &nbsp;
             <span class="layer-name" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">USGS Imagery Topo Basemap</span>
             <!--Show Details button-->
-            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, 
-              css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
+            <span class="glyphicon glyphicon-menu-right" data-bind="click: $root.onEditSettings, css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
             </span>
             <!--Dragger handle-->
             <span class="drag-handle glyphicon glyphicon-menu-hamburger" data-bind="visible: $data.selected" style="position: absolute; top: 0px; right: 10px; margin-top: 5px; margin-right: 2px; cursor: ns-resize; display: none;">&nbsp;</span>
@@ -318,15 +277,10 @@
     </li>             
 
 
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
-            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">on</span>       
+            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off', css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },click: $root.onToggleLayer">on</span>       
             &nbsp;
             <span class="layer-name active" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">Bing Aerial with Labels</span>
             <!--Show Details button-->
@@ -1144,10 +1098,9 @@
     </div>
 </div>
 </div>
+                
                 <!-- =========================SPLITTER================================ -->
-                <!--
-                Info Panel
-                -->
+                <!-- Info Panel -->
                 <div class="gutter gutter-vertical" style="height: 4px;"></div><div id="info-panel" class="split split-vertical" style="height: calc(0.28919% - 2px);">
                     <!--Button to collapse info panel-->
                     <button type="button" id="collapse-info-panel" class="btn btn-primary btn-sm" style="float: right">
