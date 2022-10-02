@@ -292,6 +292,39 @@
         <hr>
         <h5>Layers</h5>
         <div class="list-group" id="layerList">
+            <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
+                css: { 'list-group-item-primary': $data.selected() }, 
+                click: $root.onSelectLayer, 
+                event: { contextmenu: $parent.onEditSettings}">
+        <div>
+            <!--On/Off button-->
+            <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
+                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
+                  click: $root.onToggleLayer">on</span>       
+            &nbsp;
+            <span class="layer-name active" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">Bing Aerial with Labels</span>
+            <!--Show Details button-->
+            <span class="glyphicon glyphicon-menu-down" data-bind="click: $root.onEditSettings, 
+              css: { 'glyphicon-menu-down': $data.showDetails(), 'glyphicon-menu-right': !$data.showDetails() }" style="position:absolute; top:0; right:0; margin-top: 5px; margin-right: 2px; cursor: pointer">
+            </span>
+            <!--Dragger handle-->
+            <span class="drag-handle glyphicon glyphicon-menu-hamburger" data-bind="visible: $data.selected" style="position: absolute; top: 0px; right: 10px; margin-top: 5px; margin-right: 2px; cursor: ns-resize; display: none;">&nbsp;</span>
+
+            <!--Legend-->
+            <div data-bind="if: $data.legendUrl() &amp;&amp; $data.enabled()"></div>
+
+            <!--Details-->
+            <div data-bind="if: $data.showDetails()">
+                <div class="well well-sm">
+                    <!--Time controls-->
+                    <div data-bind="if: $data.currentTime()"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
         </div>
         <hr>
         <h5>Destination</h5>
