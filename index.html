@@ -30,16 +30,12 @@
 <!--<body style="font-family: 'Helvetica' !important">-->
    
 
-<ul class="tab"
-    style="z-index: 999; position: fixed; left: 0; height: 38px; width: 100%; background: rgba(46,74,110,1); overflow: visible">
-    <li><a class="tablinksLeft logo" onclick="openTabLeft(event, 'how-to')" title="Info"><strong>Quake
-        Hunter</strong></a></li>
-    <li>
-        <a class="tablinksLeft" onclick="openTabLeft(event, 'controls')" title="Controls">
-            <span class="glyphicon glyphicon-tasks"></span></a>
+<ul class="tab" style="z-index: 999; position: fixed; left: 0; height: 38px; width: 100%; background: rgba(46,74,110,1); overflow: visible">
+    <li><a class="tablinksLeft logo" onclick="openTabLeft(event, 'how-to')" title="Info"><strong>Quake Hunter</strong></a></li>
+    <li><a class="tablinksLeft" onclick="openTabLeft(event, 'controls')" title="Controls">
+        <span class="glyphicon glyphicon-tasks"></span></a>
     </li>
-    <li>
-        <a class="tablinksLeft" onclick="openTabLeft(event, 'options_div')" title="Globe Options">
+    <li><a class="tablinksLeft" onclick="openTabLeft(event, 'options_div')" title="Globe Options">
             <span class="glyphicon glyphicon-globe"></span></a>
     </li>
     <li>
@@ -52,34 +48,26 @@
     </li>
 
     <li>
-        <a class="tablinksRight" onclick="openTabRight(event, 'information');"
-           style="position: fixed; right: 1%; width: 3%;" title="Stats">
+        <a class="tablinksRight" onclick="openTabRight(event, 'information');" style="position: fixed; right: 1%; width: 3%;" title="Stats">
             <i class="fa fa-info" aria-hidden="true"></i></a>
     </li>
     <li>
-        <a class="tablinksRight" onclick="openTabRight(event, 'graphs')" style="position: fixed; right: 4%"
-           title="Graphs">
+        <a class="tablinksRight" onclick="openTabRight(event, 'graphs')" style="position: fixed; right: 4%" title="Graphs">
             <i class="fa fa-bar-chart" aria-hidden="true"></i></a>
     </li>
 </ul>
 <div id="main" class="container-split">
-            <!--
-            Left Sidebar
-            -->
+    <!--Left Sidebar-->
             <div id="left-sidebar" class="split split-horizontal tab-content" style="width: calc(0.302875% - 2px); overflow-y: hidden;">
-                <!--
-                Collapse left sidebar button
-                -->
+                <!--Collapse left sidebar button-->
                 <button type="button" id="collapse-left-sidebar" class="btn btn-primary btn-sm" style="float: right;">
                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                 </button>
             <div id="layers" class="tab-pane active" role="tabpanel">
-    <div class="section-heading">
-        <h4 class="sub-header">
-            <span class="glyphicon glyphicon-list" aria-hidden="true" style="padding-right:5px;"></span>
-            Layers
-            <a class="section-toggle" data-toggle="collapse" href="#layers-body">
-            </a>
+                <div class="section-heading">
+                    <h4 class="sub-header">
+                        <span class="glyphicon glyphicon-list" aria-hidden="true" style="padding-right:5px;"></span>Layers
+            <a class="section-toggle" data-toggle="collapse" href="#layers-body"> </a>
         </h4>
     </div>
     <div id="layers-body" class="section-body collapse in">
@@ -93,10 +81,7 @@
             </div>
             <div class="panel-collapse collapse" id="data-layers-panel">
                 <ul class="list-group" data-bind="template: { name: 'layer-template', foreach: dataLayers}" id="data-layers-item-container">
-    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+                    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() },click: $root.onSelectLayer,event: { contextmenu: $parent.onEditSettings}">
         <div>
             <!--On/Off button-->
             <span class="label pull-left label-success" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off',
@@ -471,7 +456,7 @@
             </div>
         </div>
     </div>                  
-    <!--
+  
     <div>
         <button type="button"
                 class="btn btn-primary btn-sm"
@@ -480,7 +465,7 @@
             Add Layer
         </button>
     </div>
-    -->
+
     <div class="section-heading">
         <h4 class="sub-header">
             <span class="glyphicon glyphicon-cloud" aria-hidden="true" style="padding-right:5px;"></span>
@@ -529,30 +514,17 @@
     </div>
 </div>
 
-<!-- ================================================================ -->
 
-<!-- 
-Layer Item Template
-This script renders the individual layer view model items in the Layers panel.
--->
+
+<!-- ayer Item Template This script renders the individual layer view model items in the Layers panel.-->
 <script type="text/html" id="layer-template">
-    <li class="list-group-item layer-item" 
-        data-bind="if: $data.showInMenu(),
-                css: { 'list-group-item-primary': $data.selected() }, 
-                click: $root.onSelectLayer, 
-                event: { contextmenu: $parent.onEditSettings}">
+    <li class="list-group-item layer-item" data-bind="if: $data.showInMenu(),css: { 'list-group-item-primary': $data.selected() }, click: $root.onSelectLayer, event: { contextmenu: $parent.onEditSettings}">
         <div>
-            <!--On/Off button-->
-            <span class="label pull-left" 
-                  style=" cursor: pointer"
-                  data-bind="text: $data.enabled() ? 'on' : 'off',
-                  css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },
-                  click: $root.onToggleLayer">
+            <!--On/Off button--!>
+            <span class="label pull-left" style=" cursor: pointer" data-bind="text: $data.enabled() ? 'on' : 'off', css: { 'label-success': $data.enabled(), 'label-primary': !$data.enabled() },click: $root.onToggleLayer">
             </span>       
-            &nbsp
-            <span class="layer-name" 
-                  data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }">
-            </span>
+            &nbsp;
+            <span class="layer-name" data-bind="text: $data.annotatedName(), css: { active: $data.enabled() }"></span>
             <!--Show Details button-->
             <span class="glyphicon glyphicon-menu-right"
                   data-bind="click: $root.onEditSettings, 
@@ -611,8 +583,6 @@ This script renders the individual layer view model items in the Layers panel.
                             sliderOptions: {animate: 'fast', min: 0, max: 1, orientation: 'horizontal', step: 0.05}">
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -622,10 +592,7 @@ This script renders the individual layer view model items in the Layers panel.
 
 <!-- ================================================================ -->
 
-<!--
-Server Template
-This server-template script renders a server's tab content
--->
+<!--Server TemplateThis server-template script renders a server's tab content-->
 <script type="text/html" id="server-template">
     <!-- ko if: layers().length -->
     <div class="panel panel-default">
@@ -651,10 +618,7 @@ This server-template script renders a server's tab content
     <!-- /ko -->
 </script>
 
-<!--
-Server Layer Template
-This server-layer-template script recursively renders a server's layer list items
--->
+<!--Server Layer TemplateThis server-layer-template script recursively renders a server's layer list items-->
 <script type="text/html" id="server-layer-template">
     <li>
         <input type="checkbox" data-bind="click: $root.onServerLayerClicked, checked: isChecked, visible: isLayer"/>
@@ -693,10 +657,7 @@ This server-layer-template script recursively renders a server's layer list item
 </div>
 
 <script type="text/html" id="basic-marker-template">
-    <!--
-    Marker Item Template
-    This script renders the individual marker view model items in the Markers panel.
-    -->
+    <!--    Marker Item Template    This script renders the individual marker view model items in the Markers panel.    -->
     <div class="btn-group btn-block">
         <button type="button" class="btn btn-default"
                 style="display: block; width: 70%"
@@ -756,10 +717,7 @@ This server-layer-template script recursively renders a server's layer list item
 </div>
 
 
-<!--
-Tactical Symbol Item Template
-This script renders the individual symbol view model items in the Tactical Symbols panel.
--->
+<!--Tactical Symbol Item TemplateThis script renders the individual symbol view model items in the Tactical Symbols panel.-->
 <script type="text/html" id="tactical-symbol-template">
     <div class="btn-group btn-block">
         <button type="button" class="btn btn-default"
@@ -779,10 +737,7 @@ This script renders the individual symbol view model items in the Tactical Symbo
 </script>
 
 
-<!--
-Marker View Template
-This script renders the selected symbol object the output panel.
--->
+<!--Marker View TemplateThis script renders the selected symbol object the output panel.-->
 <script type="text/html" id="tactical-symbol-view-template">
     <!-- ko if: $data -->
     <div id="basic-symbol-output" class="panel panel-default" style="height: 100%;">
@@ -839,10 +794,7 @@ This script renders the selected symbol object the output panel.
 </script>
 
 <script type="text/html" id="weather-scout-view-template">
-    <!--
-    Weather Scout View Template
-    This script renders the selected weather scout object the info panel.
-    -->
+    <!--    Weather Scout View Template    This script renders the selected weather scout object the info panel.    -->
     <!-- ko if: $data -->
     <div id="weather-scout-info" style="height: 100%;">
         <div class="col-lg-3 col-md-4 col-sm-6 panel panel-default">
@@ -884,9 +836,7 @@ This script renders the selected symbol object the output panel.
 </script>  </div>
 </div>
 <div id="settings" class="tab-pane" role="tabpanel">
-    <!--
-    Settings tab (bound to SettingsViewModel)
-    -->      
+    <!--    Settings tab (bound to SettingsViewModel)    -->      
     <div class="section-heading">
         <h4 class="sub-header">
             <span class="glyphicon glyphicon-cog" aria-hidden="true" style="padding-right:5px;"></span>
@@ -1016,13 +966,9 @@ This script renders the selected symbol object the output panel.
 </div>  
 </div>
             <!-- =========================SPLITTER============================== -->
-            <!--
-            Explorer window
-            -->
+            <!--            Explorer window            -->
             <div class="gutter gutter-horizontal" style="width: 4px;"></div><div id="explorer" class="split split-horizontal" style="width: calc(99.6971% - 2px);">
-                <!--
-                Globe canvas (see override css for #globe styling)
-                -->
+                <!--                Globe canvas (see override css for #globe styling)                -->
                 <div id="globe" class="split split-vertical" style="height: calc(99.7108% - 2px);">
                     <!--Set canvas' tabindex so keydown events can be captured by the KeyboardController -->
                     <canvas id="globe-canvas" tabindex="1" data-bind="style: { cursor: dropIsArmed() ? 'crosshair' : 'default' }" width="655" height="688" style="touch-action: none;">
@@ -1031,9 +977,7 @@ This script renders the selected symbol object the output panel.
                 <div id="globe-canvas-overlay">
     <!-- Globe overlay view fragment -->
     <div id="globe-marker-controls" class="non-interactive" style="position: absolute; top: 0; right: 0;">
-        <!-- 
-        Marker Buttons 
-        -->
+        <!--         Marker Buttons         -->
         <div id="globe-buttons" class="interactive" style="float: right; margin-top: 30px; max-width: 100px">
             <span class="btn-group" style="float: left">
                 <!-- Add Marker button and palette -->
@@ -1167,9 +1111,7 @@ This script renders the selected symbol object the output panel.
             </span>
         </div>
     </div>
-    <!--
-    Time Controls
-    -->
+    <!--    Time Controls    -->
     <div id="globe-time-controls&quot;" class="col-xs-12 non-interactive">
         <div class="row">
             <!--Create a shallow div along the bottom edge of the globe-->
